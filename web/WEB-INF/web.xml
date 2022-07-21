@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <listener>
+        <description>HttpSessionListener</description>
+        <listener-class>listener.DataAcessListener</listener-class>
+    </listener>
+    <servlet>
+        <servlet-name>HomePage</servlet-name>
+        <servlet-class>controller.HomePageController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>News</servlet-name>
+        <servlet-class>controller.NewsController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Admin</servlet-name>
+        <servlet-class>controller.AdminController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HomePage</servlet-name>
+        <url-pattern>/HomePage</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>News</servlet-name>
+        <url-pattern>/News</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Admin</servlet-name>
+        <url-pattern>/Admin</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
